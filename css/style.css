@@ -1,0 +1,594 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --primary-color:#6c63ff;
+    --success-color:#00bf8e;
+    --warning-color:#f7c94b;
+    --danger-color:#f75842;
+    --white-color:#fff;
+    --black-color:#000;
+    --bg-color:#1f2641;
+    --bg1-color:#2e3267;
+    --bg2-color:#424890;
+    --container-width-lg:76%;
+    --container-width-md:90%;
+    --container-width-sm:94%;
+    --transition:all 400ms ease;
+}
+body{
+
+font-family: "Montserrat", sans-serif;
+
+line-height: 1.7;
+background-color: var(--bg-color);
+color: var(--white-color);
+}
+.container{
+width: var(--container-width-lg);
+margin-left: auto;
+margin-right: auto;
+
+
+
+}
+li{
+    display: inline-block;
+}
+section{
+    padding: 6rem 0;
+}
+section h2{
+
+    text-align: center;
+    margin-bottom: 4rem;
+
+}
+h1,
+h2,
+h3,
+h4,
+h5{
+    line-height: 1.2;
+}
+h1{
+    font-size: 2.4rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+
+h4{
+   font-size:  1.3rem;
+}
+a{
+    color: var(--white-color);
+}
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.btn{
+    display: inline-block;
+    background: var(--white-color);
+    color: var(--black-color);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+.btn:hover{
+    background-color: transparent;
+    color: var(--white-color);
+    border-color: var(--white-color);
+
+}
+.btn-primary{
+
+    background-color: var(--danger-color);
+    color: var(--white-color);
+}
+
+    /*----------------------------------- navbar --------------------------------------*/
+.window-scroll{
+
+    background: var(--primary-color);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+    nav {
+
+    background-color: transparent;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+
+    }
+    @keyframes animateNavItems {
+        0%{
+transform: rotateZ(-90deg);
+        }
+        100%{
+            transform: rotateZ(0);
+        }
+    }
+
+    .nav__container{
+    
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    nav button{
+       display: none;
+    }
+    .nav__menu{
+    
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    }
+
+.nav__menue a{
+    font-size: 0.9rem;
+}
+.nav__menue a:hover{
+    color: var(--bg2-color) ;
+}
+/*============================= header ==========================*/
+
+header{
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 70vh;
+    margin-bottom: 5rem;
+}
+.header__container{
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+gap: 5rem;
+height: 100%;
+
+
+}
+.header-left p{
+margin: 1rem 0 2.4rem;
+}
+
+/*==============================categories==========================*/
+
+
+.categories{
+    background: var(--bg1-color);
+    height: 29rem;
+}
+.categories h1{
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+.categories__container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+}
+.categories-left{
+margin-right: 4rem;
+
+}
+.categories-left p{
+    margin: 1rem 0 3rem;
+
+}
+
+.categories-right {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+
+}
+.category{
+
+    background: var(--bg2-color);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+.category:nth-child(2) .category__icon{
+    background: var(--danger-color);
+}
+.category:nth-child(3) .category__icon{
+    background: var(--success-color);
+}
+.category:nth-child(4) .category__icon{
+    background: var(--warning-color);
+}
+.category:nth-child(5) .category__icon{
+    background: var(--success-color);
+}
+
+.category:hover{
+box-shadow:0 3rem 3rem rgba(0, 0, 0, 0.3);
+z-index: 1;
+
+}
+.category__icon{
+
+
+    padding: 0.7rem;
+    background:var(--primary-color);
+    border-radius: 0.9rem;
+}
+.category h5{
+    margin: 2rem 0 1rem;
+}
+.category p{
+    font-size: 0.85rem;
+}
+/*====================================courses start===========================================*/
+.courses{
+    margin-top: 10rem;
+
+}
+.container__courses{
+
+
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.course{
+background: var(--bg1-color);
+text-align: center;
+border: 1px solid transparent;
+transition: var(--transition);
+
+}
+.course:hover{
+    background: transparent;
+    border-color: var(--primary-color);
+}
+.course__info{
+
+padding: 2rem;
+
+
+}
+.course__info p{
+
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+/*====================================FAQs start===========================================*/
+
+.faqs{
+
+    background-color: var(--bg1-color);
+box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.faq__container{
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+
+
+
+
+}
+.faq{
+padding: 2rem;
+display: flex;
+align-items: center;
+gap: 1.4rem;
+height: fit-content;
+background-color: var(--primary-color);
+cursor: pointer;
+
+}
+.faq h4{
+font-size: 1rem;
+line-height: 2.2;
+
+
+}
+.faq__icon{
+
+align-self: flex-start;
+font-size: 1.2rem;
+
+}
+.faq p{
+    margin-top: 0.8rem;
+    display: none;
+}
+.faq.open p{
+    display: block;
+}
+/*==================================== testmaniuals start===========================================*/
+
+.testimoials__container{
+overflow-x: hidden;
+position: relative;
+margin-bottom: 5rem;
+
+
+}
+.testimoials{
+padding-top: 2rem;
+
+
+}
+.avatar{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 1rem solid var(--bg1-color);
+}
+.testimoials__info{
+
+
+    text-align: center;
+
+
+
+}
+.testimoials__body{
+
+    background-color:var(--primary-color) ;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+/*=================================footer=======================================*/
+footer{
+    background: var(--bg1-color);
+    padding-top: 5rem;
+    font-size: 0.9rem;
+}
+.footer__container{
+
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 5rem;
+
+}
+.footer__container i{
+font-size: 1.5rem;
+
+}
+.footer__container i:hover{
+color:var(--bg-color);
+
+}
+.footer__container > div h4{
+
+margin-bottom: 1.2rem;
+
+
+}
+.permalinks li{
+    display: block;
+}
+.footer__1 p{
+margin: 0 0 2rem ;
+
+
+
+}
+footer ul li {
+margin-bottom: 0.7rem;
+
+
+}
+footer ul li a:hover{
+text-decoration: underline;
+
+
+}
+.footer__socials{
+display: flex;
+gap: 1rem;
+font-size: 1.2rem;
+margin-top: 2rem;
+
+
+}
+.footer__name{
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--bg2-color);
+}
+    /*media query for tablet*/
+
+    @media screen and (max-width: 1024px){
+      
+    .container{
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+
+ /*================== navbar =======================*/
+    nav button{
+
+        display: inline-block;
+        background: transparent;
+        font-size:1.8rem ;
+        color: var(--white-color);
+        cursor: pointer;
+    }
+    nav .nav__menu .close-menu-btn{
+       display: none;
+    }
+    .nav__menu{
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+    .nav__menu li{
+
+        width: 100%;
+        height: 5.8rem;
+      
+            animation: animateNavItems 1s linear forwards ;
+            transform-origin:top right ;
+        
+    }
+    .nav__menu li a{
+        background: var(--primary-color);
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .nav__menu li a:hover{
+        background: var(--bg2-color);
+        color: var(--white-color);
+
+
+    }
+    /*================================ header =================================*/
+header{
+    height: 52vh;
+    margin-bottom: 4rem;
+}
+.header__container{
+    gap: 0;
+    padding-bottom: 3rem;
+}
+/*====================================== categorise ==================================*/
+
+.categories{
+    height: auto;
+}
+.categories__container{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+.categories-left{
+    margin-right: 0;
+}
+/*=====================================courser ==============================*/
+.courses{
+    margin-top: 0;
+}
+.container__courses{
+
+
+    grid-template-columns: 1fr 1fr;
+}
+/* =========================بشضس=========================*/
+.faq__container{
+    grid-template-columns: 1fr;
+}   
+.faq{
+    padding: 1.5rem;
+}
+
+/*=======================footer================*/
+.footer__container{
+
+    grid-template-columns: 1fr 1fr;
+}
+.footer__3 li{
+    display: block;
+}
+}
+/*===================================media query (phone)===========================*/
+@media screen and (max-width: 600px) {
+    .container{
+
+        width: var(--container-width-sm);
+    }
+    .nav__menu{
+    right: 3%;
+
+    }
+    /*===================================header===========================*/
+    header{
+height: 100vh;
+    }
+    .header__container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+    }
+    .header-left p{
+        margin-bottom: 1.3rem;
+    }
+/*===================================categorise===========================*/
+.categories-right{
+
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+}
+.category{
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.category__icon{
+
+    margin-top: 4rem;
+    display: inline-block;
+}
+/*===================================courses===========================*/
+
+.container__courses{
+    flex-wrap: wrap;
+    
+
+}
+
+.testimoials__body{
+    padding: 1.2rem;
+}
+
+/*===================================footer===========================*/
+
+.footer__container{
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+}
+.footer__1 p{
+    margin: 1rem auto;
+}
+.footer__socials{
+    justify-content: center;
+}
+
+
+}
+
